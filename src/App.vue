@@ -1,16 +1,6 @@
-<script>
-import Conditions from './components/Conditions.vue';
-import Forms from './components/Forms.vue';
-import Looping from './components/Looping.vue';
-export default{
-  components:{Forms,Conditions,Looping}
-}
-</script>
-
+<!-- src/App.vue -->
 <template>
   <div>
-    <Forms name="Form Data"/>
-    <Conditions />
-    <Looping />
+    <router-view /> <!-- This is where the current route's component is rendered -->
   </div>
 </template>

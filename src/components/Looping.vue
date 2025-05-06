@@ -22,7 +22,7 @@
       <tbody v-if="loading && users.length>0" v-for="user in users" :key="user.id">
         <tr>
           <td>{{ user.id }}</td>
-          <td>{{ user.name }}</td>
+          <td><router-link :to="'/UserDetails/' + user.id">{{ user.name }}</router-link></td>
           <td>{{ user.email }}</td>
           <td>{{ user.address.city }}</td>
           <td>{{ user.website }}</td>
