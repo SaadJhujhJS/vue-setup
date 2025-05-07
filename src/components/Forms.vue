@@ -12,11 +12,18 @@
                 </div>
             </form>
         </div>
+        <div v-if="show">
+            <UnmountBeforeUnmount />
+        </div>
+        <button v-on:click="show=!show">Click</button>
     </div>
 </template>
 <script>
+import UnmountBeforeUnmount from './UnmountBeforeUnmount.vue';
+
 export default{
     name:"Forms",
+    components:{UnmountBeforeUnmount},
     props:{
         name:{type:String, required:true}
     },
@@ -24,7 +31,8 @@ export default{
         return{
            user:{
             name:""
-           }
+           },
+           show:false
         }
     },
     methods:{
