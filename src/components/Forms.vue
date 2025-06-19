@@ -15,7 +15,7 @@
         <div v-if="show">
             <UnmountBeforeUnmount />
         </div>
-        <button v-on:click="show=!show">Click</button>
+        <button v-on:click="show=!show">click</button>
     </div>
 </template>
 <script>
